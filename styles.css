@@ -19,11 +19,17 @@ h1 {
     font-weight: 900;
 }
 
+/* Flex container */
+
+.intro, 
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Intro */
 
 .intro {
-    display: flex;
-    flex-direction: column;
     min-height: 250px;
     justify-content: center;
     text-align: center;
@@ -34,14 +40,12 @@ h1 {
 /* Main content */
 
 .main-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 2.5em 2em 0 2em;
 }
 
 .img-main {
-    width: 30%;
+    width: 120px;
     border-radius: 50%;
     align-self: center;
 }
