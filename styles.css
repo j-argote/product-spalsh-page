@@ -1,3 +1,5 @@
+*, *::before, *::after {box-sizing: border-box;}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #404040;
@@ -23,8 +25,18 @@ p {
 }
 
 .beta-text,
+.top-text,
 .subheading {
     text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: .25em;
+    margin: 0 auto;
+    border-top: 5px solid;
+    order: -1;
 }
 
 .fine-print {
@@ -57,11 +69,12 @@ p {
 
 .intro {
     min-height: 250px;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     color: #fff;
     background: #9480e4 url("images/intro-bg.png");
     background-size: cover;
+    padding-bottom: 1.5em;
 }
 
 /* Main content */
@@ -75,6 +88,11 @@ p {
     width: 120px;
     border-radius: 50%;
     align-self: center;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
 }
 
 /* Form */
@@ -100,9 +118,6 @@ input:focus {
 
 .btn {
     padding: 1em 0;
-    margin-top: 1em;
-    background-color: #8a71ec;
-    color: #fff;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 1px;
@@ -110,9 +125,18 @@ input:focus {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn-primary {
+    color: #fff;
+    background-color: #8a71ec;
+    margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #b7a7f6;
 }
+
+
 
 /* Media queries */
 
